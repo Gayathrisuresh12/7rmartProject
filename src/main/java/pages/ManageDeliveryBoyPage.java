@@ -28,11 +28,13 @@ public class ManageDeliveryBoyPage {
 	@FindBy(xpath="//input[@placeholder='Phone Number']") WebElement phoneNumberField;
 	@FindBy(xpath="//button[@type='submit']") WebElement submitButton;
 	@FindBy(xpath = "//tbody/tr[1]") WebElement actualRowDetails;
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-deliveryboy' and @class='small-box-footer']") WebElement manageDeliveryBoyGrid;
+
 
 
 	public void clickOnManageDeliveryBoy() {
 
-		WebElement manageDeliveryBoyGrid = driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-deliveryboy' and @class='small-box-footer']"));
+//		WebElement manageDeliveryBoyGrid = driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-deliveryboy' and @class='small-box-footer']"));
 
 		manageDeliveryBoyGrid.click();
 

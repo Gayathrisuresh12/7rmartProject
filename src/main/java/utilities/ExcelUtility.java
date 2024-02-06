@@ -35,5 +35,17 @@ public class ExcelUtility {
 		Cell c = r.getCell(j);
 		return c.getStringCellValue();
 	}
+	
+public static String getInteger(int a, int b, String sheet) throws IOException {
+		
+		String filepath = GeneralUtility.TESTDATAFILE;
+		f= new FileInputStream(filepath);
+		wb = new XSSFWorkbook(f);
+		sh = wb.getSheet(sheet);
+		Row r = sh.getRow(a);
+		Cell c = r.getCell(b);
+		int x = (int) c.getNumericCellValue();
+		return String.valueOf(x);
+	}
 
 }

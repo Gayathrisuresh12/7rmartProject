@@ -10,14 +10,14 @@ import utilities.GeneralUtility;
 import utilities.PageUtility;
 
 
-public class FileUploadPage {
+public class ManagePagesPage {
 	
 public WebDriver driver;
 PageUtility pageUtility;
 FileUploadUtility fileUploadUtility;
 	
 	
-	public FileUploadPage(WebDriver driver) {
+	public ManagePagesPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -30,10 +30,9 @@ FileUploadUtility fileUploadUtility;
 	@FindBy(xpath="//input[@name='title']") WebElement titleField;
 	@FindBy(xpath="//input[@name='page']") WebElement pageField;
 	@FindBy(xpath="//button[@type='submit']") WebElement saveButton;
+	@FindBy(xpath = "//div[@class='col-sm-12']//child::div") WebElement pageCreatedSuccessfullyAlertPopup;
 
 
-
-	String path = "C:\\Users\\Techh\\Downloads\\GloboPrime.png";
 
 	public void clickOnManageContent() {
 		manageContent.click();
@@ -70,6 +69,9 @@ FileUploadUtility fileUploadUtility;
 		saveButton.click();
 	}
 	
+	public boolean isPageCreatedSuccessfullyAlertPopupDisplayed() {
+		return pageCreatedSuccessfullyAlertPopup.isDisplayed();
+	}
 	
 	
 
