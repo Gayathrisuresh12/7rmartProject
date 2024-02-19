@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Grouping]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="generateReport.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testScripts.ManageDeliveryBoyTest">
+        <methods>
+          <include name="verifyUserAbleToSearchWithNameAndEmailAndNumber"/>
+          <include name="driverQuit"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- testScripts.ManageDeliveryBoyTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Grouping] -->

@@ -13,7 +13,7 @@ public class ManageSliderTest extends Base{
 	
 	
 	
-	@Test
+	@Test(description = "verify whether the User is able to upload image in manage slider page")
 	public void verifyThatUserIsAbleToUploadImageInManageSliderLink() {
 		
 		String username = ExcelUtility.getString(1, 0,"LoginPage" );

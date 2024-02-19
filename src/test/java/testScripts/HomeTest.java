@@ -1,6 +1,5 @@
 package testScripts;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
@@ -10,7 +9,7 @@ import utilities.ExcelUtility;
 public class HomeTest extends Base{
 	
 	
-	@Test
+	@Test(description = "verify whether the User is able to click on each grid")
 	public void verifyUserAbleToClickOnEachGrid() {
 		
 		String username = ExcelUtility.getString(1, 0,"LoginPage" );

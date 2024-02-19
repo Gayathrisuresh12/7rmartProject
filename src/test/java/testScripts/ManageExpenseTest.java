@@ -10,7 +10,7 @@ import utilities.ExcelUtility;
 
 public class ManageExpenseTest extends Base {
 
-	@Test
+	@Test(description = "verify whether the User is able to upload images and add expense")
 	public void verifyThatUserIsAbleToAddExpenseAndUploadImageInManageExpenseTest() throws IOException {
 
 		String username = ExcelUtility.getString(0, 1, "ManageExpenseTest");

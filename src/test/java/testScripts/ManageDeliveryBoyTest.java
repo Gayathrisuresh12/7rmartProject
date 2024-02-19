@@ -3,10 +3,7 @@ package testScripts;
 import static org.testng.Assert.assertEquals;
 
 import java.util.List;
-
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageDeliveryBoyPage;
@@ -14,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class ManageDeliveryBoyTest extends Base {
 	
-	@Test
+	@Test(description = "verify whether the User is able to search email and number" ,groups= {"Smoke"})
 	public void verifyUserAbleToSearchWithNameAndEmailAndNumber() {
 		
 		String username = ExcelUtility.getString(1, 0,"LoginPage" );

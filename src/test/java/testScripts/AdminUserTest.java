@@ -8,13 +8,14 @@ import org.testng.annotations.Test;
 
 import pages.AdminUserPage;
 import pages.LoginPage;
+import reTry.Retry;
 import pages.HomePage;
 import utilities.ExcelUtility;
 import utilities.RandomUtility;
 
 public class AdminUserTest extends Base {
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class, description = "Verify whether user is able to add admin users")
 	public void verifyThatUserIsAbleToAddAdminUsersInformationInAdminUsersLink() throws IOException {
 		
 		String username = ExcelUtility.getString(0, 1, "AdminUserTest");

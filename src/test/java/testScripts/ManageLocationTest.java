@@ -13,7 +13,7 @@ import utilities.ExcelUtility;
 
 public class ManageLocationTest extends Base {
 	
-	@Test
+	@Test(description = "verify whether the User is able to add location in manage location")
 	public void verifyThatTheUserIsAbleToAddLocationInManageLocationMoreInfoLink() throws IOException {
 		
 		String username = ExcelUtility.getString(0, 1, "ManageLocationsTest");

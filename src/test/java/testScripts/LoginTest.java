@@ -1,9 +1,6 @@
 package testScripts;
 
 import java.io.IOException;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,7 +10,7 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends Base{
 
-	@Test(description = "verify whether the User is able to login with valid credentials")
+	@Test(description = "verify whether the User is able to login with valid credentials" ,priority=1,groups= {"Regression"})
 	public void verifyUserAbleToLoginWithCorrectUsernameAndCorrectPassword() {
 		
 		String username = ExcelUtility.getString(1, 0,"LoginPage" );
@@ -28,7 +25,7 @@ public class LoginTest extends Base{
 	}
 	
 	
-	@Test
+	@Test(description = "verify whether the User is able to login with invalid pwd" ,groups= {"Regression"})
 	public void verifyUserNOTAbleToLoginWithCorrectUsernameAndIncorrectPassword() {
 		
 		String username = ExcelUtility.getString(1, 0,"LoginPage" );

@@ -10,7 +10,7 @@ import utilities.ExcelUtility;
 
 public class ManagePagesTest extends Base {
 	
-	@Test
+	@Test(description = "verify whether the User is able to upload image in image field")
 	public void verifyUserAbleToUploadFileInManagePageImagefield() {
 		
 		String username = ExcelUtility.getString(1, 0,"LoginPage" );

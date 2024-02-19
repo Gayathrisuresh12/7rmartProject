@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 public class ManageOrderTest extends Base {
 	
 	
-	@Test
+	@Test(description = "verify whether the User is able to change status")
 	public void verifyUserAbleToChangeStatus() {
 		String username = ExcelUtility.getString(1, 0,"LoginPage" );
 		String password = ExcelUtility.getString(1, 1,"LoginPage" );
